@@ -11,22 +11,22 @@ class UserDetailsVC: UIViewController {
     let user: User
     
     @IBOutlet var userName: UILabel!
-    @IBOutlet var userInfo: UILabel!
-    @IBOutlet var userImageView: UIImageView!
+    @IBOutlet var userAge: UILabel!
+    @IBOutlet var userAddress: UILabel!
+    @IBOutlet var userPhoneNumber: UILabel!
+    @IBOutlet var userTelephoneNumber: UILabel!
     
-    @IBAction func updateUserImage() {
-//        let imagePicker = UIImagePickerController()
-//        imagePicker.delegate = self
-//        imagePicker.sourceType = UIImagePickerController.isSourceTypeAvailable(.camera) ? .camera : .photoLibrary
-//        imagePicker.allowsEditing = true
-//        present(imagePicker, animated: true)
-    }
+    @IBOutlet var userImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userName.text = user.firstName + user.lastName
-        userInfo.text = "BlaBlaBla"
-        userImageView.image = user.userImage
+        userImageView.layer.cornerRadius = 5
+        userName.text =  "Name: " + user.firstName + " " + user.lastName
+        userAge.text = "Age: " + user.age
+        userAddress.text = "Address: " + user.hometown + ", " + user.state + ", " + user.country
+        userPhoneNumber.text = "Phone No.: " + user.phoneNumber
+        userTelephoneNumber.text = "Telephone No.: " + user.telephoneNumber
+        userImageView.image = user.userImage ?? UIImage(named: "person")
     }
     
     required init?(coder: NSCoder) { fatalError("Oops! Something went wrong!") }
@@ -36,12 +36,3 @@ class UserDetailsVC: UIViewController {
         super.init(coder: coder)
     }
 }
-
-//extension UserDetailsVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        guard let selectedImage = info[.editedImage] as? UIImage else { return }
-//        userImageView.image = selectedImage
-//        UserListFeed.saveImage(selectedImage, forUser: user)
-//        dismiss(animated: true)
-//    }
-//}

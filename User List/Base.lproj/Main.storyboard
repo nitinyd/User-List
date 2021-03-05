@@ -29,14 +29,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YPH-Zs-bCx">
-                                                    <rect key="frame" x="10" y="6.5" width="50" height="47.5"/>
-                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="tintColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YPH-Zs-bCx">
+                                                    <rect key="frame" x="10" y="5" width="50" height="50.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="PxU-he-iyf"/>
                                                         <constraint firstAttribute="width" secondItem="YPH-Zs-bCx" secondAttribute="height" multiplier="1:1" id="Y9W-Jn-Pm6"/>
                                                     </constraints>
+                                                    <imageReference key="image" image="person" symbolScale="small"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EOw-ZY-cej">
                                                     <rect key="frame" x="65" y="5.5" width="344" height="50"/>
@@ -169,14 +170,14 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Jgo-iS-uiG">
                                                     <rect key="frame" x="157" y="32.5" width="100" height="135"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5VP-eZ-H5w">
-                                                            <rect key="frame" x="0.0" y="3" width="100" height="94"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5VP-eZ-H5w">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                             <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="100" id="BnA-F0-lQM"/>
                                                                 <constraint firstAttribute="width" secondItem="5VP-eZ-H5w" secondAttribute="height" multiplier="1:1" id="X4y-yX-SMc"/>
                                                             </constraints>
-                                                            <imageReference key="image" image="person.fill" catalog="system" symbolScale="small"/>
+                                                            <imageReference key="image" image="person" symbolScale="small"/>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uT6-mA-tRK">
                                                             <rect key="frame" x="0.0" y="105" width="100" height="30"/>
@@ -265,14 +266,14 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="nJM-7q-M0x" userLabel="DOB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="nJM-7q-M0x" userLabel="Age">
                                         <rect key="frame" x="0.0" y="315" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nJM-7q-M0x" id="z8U-XC-v06">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date Of Birth" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f6d-Q6-FtB">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f6d-Q6-FtB">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -499,8 +500,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addImageButton" destination="uT6-mA-tRK" id="Dw2-Zq-fZg"/>
+                        <outlet property="age" destination="f6d-Q6-FtB" id="4cn-HU-peV"/>
                         <outlet property="country" destination="o4I-2e-XLC" id="TRm-2g-aL1"/>
-                        <outlet property="dob" destination="f6d-Q6-FtB" id="4cn-HU-peV"/>
                         <outlet property="firstName" destination="WuH-Gt-va4" id="qwf-P4-I7r"/>
                         <outlet property="gender" destination="loU-Oh-7EI" id="RrK-6l-DGL"/>
                         <outlet property="hometown" destination="tMv-rh-VQ9" id="oFa-A5-X4q"/>
@@ -524,49 +525,66 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nn1-JM-bke">
-                                <rect key="frame" x="103.5" y="294" width="207" height="308"/>
+                                <rect key="frame" x="62" y="108" width="290" height="432.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S75-Bz-W56">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="30"/>
-                                        <state key="normal" title="Update Image"/>
-                                        <connections>
-                                            <action selector="updateUserImage" destination="dCI-M8-NG2" eventType="touchUpInside" id="DhQ-Fs-jNb"/>
-                                        </connections>
-                                    </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="o55-9g-oLo">
-                                        <rect key="frame" x="0.0" y="41.5" width="207" height="204"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o55-9g-oLo">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="290"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        <color key="tintColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="o55-9g-oLo" secondAttribute="height" multiplier="1:1" id="P85-1d-RsG"/>
                                         </constraints>
+                                        <imageReference key="image" image="person" symbolScale="small"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gt7-1j-Hjr">
-                                        <rect key="frame" x="0.0" y="257" width="207" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="300" width="290" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="15"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iru-xh-UyQ">
-                                        <rect key="frame" x="0.0" y="287.5" width="207" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iru-xh-UyQ" userLabel="Age">
+                                        <rect key="frame" x="0.0" y="328.5" width="290" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="15"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmR-W9-fIN" userLabel="Address">
+                                        <rect key="frame" x="0.0" y="357" width="290" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="15"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone No." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqB-wo-1Ok" userLabel="Phone Number">
+                                        <rect key="frame" x="0.0" y="385.5" width="290" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="15"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telephone No." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKx-TG-Wud" userLabel="TelephoneNumber">
+                                        <rect key="frame" x="0.0" y="414" width="290" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="15"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HbV-Sf-MwX"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Nn1-JM-bke" firstAttribute="centerX" secondItem="VX2-Av-m8l" secondAttribute="centerX" id="2nh-UI-1FB"/>
-                            <constraint firstItem="Nn1-JM-bke" firstAttribute="width" secondItem="HbV-Sf-MwX" secondAttribute="width" multiplier="0.5" id="8C8-DN-QUI"/>
-                            <constraint firstItem="Nn1-JM-bke" firstAttribute="centerY" secondItem="VX2-Av-m8l" secondAttribute="centerY" id="ggy-T0-6tL"/>
+                            <constraint firstItem="Nn1-JM-bke" firstAttribute="width" secondItem="HbV-Sf-MwX" secondAttribute="width" multiplier="0.7" id="8C8-DN-QUI"/>
+                            <constraint firstItem="Nn1-JM-bke" firstAttribute="top" secondItem="HbV-Sf-MwX" secondAttribute="top" constant="20" id="gll-HQ-Cw0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OBA-MS-feH"/>
                     <connections>
+                        <outlet property="userAddress" destination="fmR-W9-fIN" id="4Cc-xI-nj9"/>
+                        <outlet property="userAge" destination="Iru-xh-UyQ" id="omw-O0-Ggu"/>
                         <outlet property="userImageView" destination="o55-9g-oLo" id="5Lr-1L-0Lf"/>
-                        <outlet property="userInfo" destination="Iru-xh-UyQ" id="omw-O0-Ggu"/>
                         <outlet property="userName" destination="gt7-1j-Hjr" id="KpV-l0-yg9"/>
+                        <outlet property="userPhoneNumber" destination="vqB-wo-1Ok" id="M9Y-rW-IdI"/>
+                        <outlet property="userTelephoneNumber" destination="XKx-TG-Wud" id="Wcm-BH-zeg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9UO-tz-iYh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -598,7 +616,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="person" width="624" height="646"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="trash.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
@@ -606,9 +624,6 @@
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

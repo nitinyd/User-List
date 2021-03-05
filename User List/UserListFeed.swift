@@ -25,8 +25,8 @@ struct UserListFeed {
 
         do {
           let users = try decoder.decode([User].self, from: usersData)
-          return users.map { userList in
-            User(firstName: userList.firstName, lastName: userList.lastName, userImage: loadImage(forUser: userList))
+          return users.map { user in
+            User(firstName: user.firstName, lastName: user.lastName, age: user.age, gender: user.gender, country: user.country, state: user.state, hometown: user.hometown, phoneNumber: user.phoneNumber, telephoneNumber: user.telephoneNumber, userImage: loadImage(forUser: user))
           }
           
         } catch let error {

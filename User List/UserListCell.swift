@@ -18,8 +18,6 @@ class UserListCell: UITableViewCell {
     @IBOutlet var userImage: UIImageView!
     @IBOutlet var deleteButton: UIButton!
     
-    var user = User(firstName: "", lastName: "", userImage: nil)
-    
     @IBAction func deleteUser(_ sender: UIButton) {
         delegate?.deletePressed(cell: self)
     }

@@ -39,12 +39,11 @@ extension UserListVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(UserListCell.self)", for: indexPath) as? UserListCell
         else { fatalError("Could not load cell!") }
         let user = UserListFeed.users[indexPath.row]
-        cell.userName.text = user.firstName + user.lastName
-        cell.userInfo.text = "BlaBlaBla"
-        cell.userImage.image = user.userImage
+        cell.userName.text = user.firstName + " " + user.lastName
+        cell.userInfo.text = user.gender + " | " + user.age + " | " + user.state
+        cell.userImage.image = user.userImage ?? UIImage(named: "person")
         cell.userImage.layer.cornerRadius = 25
         cell.delegate = self
-        cell.user = user
         return cell
     }
 }
