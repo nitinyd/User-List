@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddUserVC: UITableViewController {
+class AddUserVC: UIViewController {
     
     @IBOutlet var firstName: UITextField!
     @IBOutlet var lastName: UITextField!
@@ -20,6 +20,7 @@ class AddUserVC: UITableViewController {
     @IBOutlet var telephoneNumber: UITextField!
     @IBOutlet var userImageView: UIImageView!
     @IBOutlet var addImageButton: UIButton!
+    @IBOutlet var scrollView: UIScrollView!
     
     var newUserImage: UIImage?
     
@@ -101,6 +102,8 @@ class AddUserVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
         setupViews()
     }
 }
@@ -132,7 +135,6 @@ extension AddUserVC {
     func setupViews() {
         userImageView.layer.cornerRadius = 10
         addImageButton.layer.cornerRadius = 5
-        self.tableView.backgroundColor = UIColor.white
     }
     
     func isValidNumber(number: String) -> NumberError {
@@ -152,5 +154,22 @@ extension AddUserVC {
     
     enum NumberError {
         case repeated, notANumber, valid
+    }
+    
+    @objc func keyboardWillShow(notification:NSNotification) {
+
+        guard let userInfo = notification.userInfo else { return }
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + 20
+        scrollView.contentInset = contentInset
+    }
+
+    @objc func keyboardWillHide(notification:NSNotification) {
+
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
     }
 }
