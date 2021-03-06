@@ -104,7 +104,7 @@
                                             <outlet property="userImage" destination="YPH-Zs-bCx" id="dn9-oR-dwq"/>
                                             <outlet property="userInfo" destination="ujG-K4-9WB" id="5w9-nz-lGK"/>
                                             <outlet property="userName" destination="8Fa-97-wn8" id="xR8-IG-9Fh"/>
-                                            <segue destination="dCI-M8-NG2" kind="show" destinationCreationSelector="showUserDetails:" id="gK1-NP-w8P"/>
+                                            <segue destination="dCI-M8-NG2" kind="presentation" destinationCreationSelector="showUserDetails:" id="gK1-NP-w8P"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -389,11 +389,11 @@
             <objects>
                 <viewController id="dCI-M8-NG2" userLabel="UserDetailsVC" customClass="UserDetailsVC" customModule="User_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VX2-Av-m8l">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nn1-JM-bke">
-                                <rect key="frame" x="62" y="108" width="290" height="432.5"/>
+                                <rect key="frame" x="62" y="20" width="290" height="432.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o55-9g-oLo">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="290"/>
