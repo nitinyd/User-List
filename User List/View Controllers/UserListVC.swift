@@ -18,6 +18,11 @@ class UserListVC: UIViewController {
     }
     @IBOutlet var tableView: UITableView!
     
+    @IBAction func showAddUser(_ sender: Any) {
+        let parentVC = self.parent as! CustomPageVC
+        parentVC.setViewControllers([parentVC.orderedVCs.last!], direction: .forward, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self

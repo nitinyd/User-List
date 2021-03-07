@@ -24,6 +24,15 @@ class AddUserVC: UIViewController {
     
     var newUserImage: UIImage?
     
+    @IBAction func refreshFields(_ sender: Any) {
+        refreshAllFields()
+    }
+    
+    @IBAction func showUserList(_ sender: Any) {
+        let parentVC = self.parent as! CustomPageVC
+        parentVC.setViewControllers([parentVC.orderedVCs.first!], direction: .reverse, animated: true, completion: nil)
+    }
+    
     @IBAction func addImage(_ sender: Any) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
@@ -97,7 +106,10 @@ class AddUserVC: UIViewController {
         }
         
         UserListFeed.addNew(user: User(firstName: firstName, lastName: lastName, age: age, gender: gender, country: country, state: state, hometown: hometown, phoneNumber: phoneNumber, telephoneNumber: telephoneNumber, userImage: newUserImage))
-        navigationController?.popViewController(animated: true)
+        
+        refreshAllFields()
+        let parentVC = self.parent as! CustomPageVC
+        parentVC.setViewControllers([parentVC.orderedVCs.first!], direction: .reverse, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -171,5 +183,18 @@ extension AddUserVC {
 
         let contentInset:UIEdgeInsets = UIEdgeInsets.zero
         scrollView.contentInset = contentInset
+    }
+    
+    func refreshAllFields() {
+        self.firstName.text = ""
+        self.lastName.text = ""
+        self.age.text = ""
+        self.gender.text = ""
+        self.country.text = ""
+        self.state.text = ""
+        self.hometown.text = ""
+        self.phoneNumber.text = ""
+        self.telephoneNumber.text = ""
+        self.userImageView.image = UIImage(named: "person")
     }
 }
